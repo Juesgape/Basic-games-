@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+header {
+    position: relative;
+    height: 8rem;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+header figure {
+    max-width: 20rem; 
+}
+header figure img {
+    width: 100%;
+    background-color: black;
+}
+
+.main-games-menu {
+    padding-top: 5rem;
+    display: grid;
+    /* grid-auto-flow: column; */
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+.main-games-menu div{
+    width: 10rem;
+}
+.main-games-menu div img {
+    width: 100%;
+}

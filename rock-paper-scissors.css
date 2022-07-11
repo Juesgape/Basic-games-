@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+header {
+    position: relative;
+    height: 8rem;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+header figure {
+    max-width: 20rem; 
+}
+header figure img {
+    width: 100%;
+    background-color: black;
+}
+.rock-paper-scissors-screen {
+    display: flex;
+}
