@@ -22,6 +22,81 @@ header figure img {
     width: 100%;
     background-color: black;
 }
-.rock-paper-scissors-screen {
+
+section {
+    height: 100vh;
+    background-color: rgb(39, 41, 68);
+}
+
+.score {
+    padding-top: 5rem;
+    color: rgb(219, 219, 219);
+    height: 10vh;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.score h2 {
+    font-size: 2.5rem;
+}
+.score p {
+    text-align: center;
+    padding: 10px;
+    font-size: 2rem;
+}
+
+.intro {
+    padding-top: 2rem;
+    color: rgb(219, 219, 219);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: opacity 0.5s ease;
+}
+.intro h1 {
+    font-size: 2.8rem;
+}
+.intro button, .match button {
+    width: 10rem;
+    height: 3rem;
+    background: none;
+    border: none;
+    color: rgb(219, 219, 219);
+    font-size: 2rem;
+    background-color: rgb(45, 117, 96);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.match {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease 0.5s;
+}
+.winner {
+    color: rgb(219, 219, 219);
+    text-align: center;
+    font-size: 2.8rem;
+}
+.hands, .options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.player-hand {
+    transform: rotateY(180deg);
+}
+
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
 }

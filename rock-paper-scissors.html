@@ -16,35 +16,40 @@
 
     <!-- interface of the game -->
 
-    <main class="main-rock-paper-scissors-screen">
-        <div class="rock-paper-scissors-screen">
-            <div>
+    <section class="game">
 
-                <input value="Rock" type="button">
-                <input value="Paper" type="button">
-                <input value="Scissors" type="button">
-
+        <div class="score">
+            <div class="player-score">
+                <h2>Jugador</h2>
+                <p>0</p>
             </div>
-            <div></div>
-
-        </div>
-
-        <div class="rock-paper-scissors-result">
-            <div>
-                <h2>You chose:</h2>
-                <span id="users-choice"></span>
-            </div>
-            <div>
-                <h2>Machine chose:</h2>
-                <span id="machines-choice"></span>
-            </div>
-            <div>
-                <h2>Result:</h2>
-                <span id="result"></span>
+            <div class="machine-score">
+                <h2>Máquina</h2>
+                <p>0</p>
             </div>
         </div>
 
-    </main>
+        <div class="intro">
+            <h1>Piedra Papel y Tijeras</h1>
+            <button>Juguemos!</button>
+        </div>
+
+        <div class="match fadeOut">
+            <h2 class="winner">Elige una opción</h2>
+            <div class="hands">
+                <img class="player-hand" src="./images/rock.png" alt="player-hand">
+                <img class="machine-hand" src="./images/rock.png" alt="machine-hand">
+            </div>
+
+            <div class="options">
+                <button class="rock">Piedra</button>
+                <button class="paper">Papel</button>
+                <button class="scissors">Tijera</button>
+            </div>
+
+        </div>
+
+    </section>
 
     <script src="./rock-paper-scissors.js"></script>
 </body>
