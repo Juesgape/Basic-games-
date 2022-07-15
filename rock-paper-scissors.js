@@ -34,6 +34,10 @@ const game = () => {
 
         options.forEach(option => {
             option.addEventListener('click', function() {
+
+                playerHand.src = `./images/Piedra.png`
+                machineHand.src = `./images/Piedra.png`;
+
                 const machineRandomNumber = Math.floor(Math.random() * 3);
                 const machineChoice = machineOptions[machineRandomNumber];
 
@@ -41,7 +45,7 @@ const game = () => {
                     compareHands(this.textContent, machineChoice);
 
                     //update Images
-                    playerHand.src = `./images/${this.textContent}.png`
+                    playerHand.src = `./images/${this.textContent}.png`;
                     machineHand.src = `./images/${machineChoice}.png`;
                 }, 2000);
                 
