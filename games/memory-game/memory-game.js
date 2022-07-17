@@ -1,6 +1,6 @@
 const section = document.querySelector('section');
 const playerLivesCount = document.querySelector('span');
-let playerLives = 6;
+let playerLives = 10;
 
 //Link text
 playerLivesCount.textContent = playerLives;
@@ -27,7 +27,7 @@ const getData = () => [
 
 //Randomize
 const randomize = () => {
-    const cardData = getData();
+    let cardData = getData();
     console.log(cardData)
     cardData.sort(() => Math.random() - 0.5);
     return cardData;
@@ -35,7 +35,7 @@ const randomize = () => {
 
 //Card generator function
 const cardGenerator = () => {
-    const cardData = randomize();
+    let cardData = randomize();
     //generate the HTML
     cardData.forEach((item) => {
 
@@ -68,7 +68,8 @@ const CheckCards = (e) => {
     const clickedCard = e.target;
     clickedCard.classList.add('flipped');
     console.log(clickedCard);
-    const flippedCards = document.querySelectorAll('.flipped')
+    const flippedCards = document.querySelectorAll('.flipped');
+    const toggleCard = document.querySelectorAll('.toggleCard');
     //logic
     if(flippedCards.length === 2) {
         if(flippedCards[0].getAttribute('name') === flippedCards[1].getAttribute('name')) {
@@ -88,24 +89,36 @@ const CheckCards = (e) => {
             playerLivesCount.textContent = playerLives;
 
             if(playerLives === 0) {
-                restart();
+                restart('👎 Inténtalo de nuevo');
             }
         }
-    }   
+    }
+    //Did we win?
+    if(toggleCard.length === 16) {
+        restart('👌 GANASTE!');
+    }
 };
 
 //restart
-const restart = () => {
+const restart = (text) => {
     let cardData = randomize();
     let faces = document.querySelectorAll('.face');
     let cards = document.querySelectorAll('.card');
+    section.style.pointerEvents = 'none';
+
     cardData.forEach((item, index) => {
         cards[index].classList.remove('toggleCard');
         //randomize
-        cards[index].style.pointerEvents = 'all';
+        setTimeout(() => {
+            cards[index].style.pointerEvents = 'all';
+            faces[index].src = item.imgSrc;
+            cards[index].setAttribute('name', item.name);
+            section.style.pointerEvents = 'all';
+        }, 100);
     });
-    playerLives = 6;
+    playerLives = 10;
     playerLivesCount.textContent = playerLives;
+    setTimeout(() => window.alert(text), 100)
 }
 
 cardGenerator();
