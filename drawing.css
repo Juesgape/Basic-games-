@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+header {
+    position: absolute;
+    height: 8rem;
+    min-width: 320px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+header figure {
+    max-width: 20rem; 
+}
+header figure img {
+    width: 100%;
+    background-color: black;
+} 
+.configurations {
+    position: absolute;
+    padding-top: 10rem;
+}
+.canvas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 320px;
+    width: 100%;
+    height: 100vh;
+}
+#canvas {
+    border: black solid;
+    
+}

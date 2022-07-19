@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="./drawing.css">
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="./index.html"><img src="./images/Juesgape.png" alt="logo"></a>
+        </figure>
+    </header>
+
+    <div class="configurations">
+        <div class="erase-all">
+            <button>Erase all</button>
+        </div>
+        <div class="change-color">
+            <input type="color">Change color</input>
+        </div>
+        <div class="eraser">
+            <button>Eraser</button>
+        </div>
+    </div>
+
+    <div class="canvas-container">
+        <canvas style="cursor: crosshair;" id="canvas" width="100%" height="100vh"></canvas>
+    </div>
+
+    <script src="drawing.js"></script>
+</body>
+</html>
