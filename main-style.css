@@ -13,7 +13,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aqua;
+    background-color: #FF8ACE;
+    box-shadow: 5px 5px 15px -4px #000000;
 }
 header figure {
     max-width: 20rem; 
@@ -21,6 +22,22 @@ header figure {
 header figure img {
     width: 100%;
     background-color: black;
+}
+
+body {
+    background-color: #96AAFF;
+}
+div {
+    transition: background-color 0.5s ease-out;
+    transition: box-shadow 0.5s ease-out;
+    transition: color 0.2s ease-out;
+}
+div:hover {
+    cursor: pointer;
+    background-color: rebeccapurple;
+    box-shadow: 0px 6px 20px -6px rgba(0,0,0,0.79);
+    color: white;
+
 }
 
 .main-games-menu {
