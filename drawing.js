@@ -43,6 +43,11 @@ window.addEventListener('load', () => {
     }
 
     //evvent listeners
+    canvas.addEventListener('touchstart', startPosition);
+    canvas.addEventListener('touchcancel', finishedPosition);
+    canvas.addEventListener('touchmove', draw);
+    canvas.addEventListener('touchend', draw);
+
     canvas.addEventListener('mousedown', startPosition);
     canvas.addEventListener('mouseup', finishedPosition);
     canvas.addEventListener('mousemove', draw);
