@@ -22,6 +22,9 @@ header figure img {
     width: 100%;
     background-color: black;
 }
+body {
+    overflow: hidden;
+}
 
 section {
     height: 100vh;
@@ -85,13 +88,22 @@ section {
     text-align: center;
     font-size: 2.8rem;
 }
-.hands, .options {
+.hands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 .player-hand {
     transform: rotateY(180deg);
+    width: 18rem;
+}
+.machine-hand {
+    width: 18rem;
 }
 
 div.fadeOut {
@@ -161,5 +173,17 @@ div.fadeIn {
     }
     100% {
         transform: translateY(0px);
+    }
+}
+
+/*adding media queries, ik it is a bad practice but I dont want to extend me so much*/
+
+@media (min-width: 600px) {
+    .player-hand {
+        all: unset;
+        transform: rotateY(180deg);
+    }
+    .machine-hand {
+        all: unset;
     }
 }
