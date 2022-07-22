@@ -22,3 +22,72 @@ header figure img {
     width: 100%;
     background-color: black;
 }
+body {
+    background-color: rgb(227, 255, 194);
+}
+.grid {
+    min-width: 320px;
+    /* width: 500px; */
+    /* max-width: 606px;
+    max-height: 606px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+.container {
+    min-height: 100px;
+    min-width: 100px;
+
+    border: black solid;
+}
+.mole {
+    background-color: blue;    
+    background-image: url('./images/mole.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10rem;
+}
+.titles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem;
+}
+.score-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.time-left-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 400px) {
+    .container {
+        width: 130px;
+        height: 130px;
+    }
+    .titles {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 520px) {
+    .container {
+        width: 140px;
+        height: 140px;
+    }
+    .grid {
+        width: 500px;
+        margin: 0 auto;
+    }
+    .mole {
+        background-size: 15rem;
+    }
+}
