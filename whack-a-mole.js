@@ -37,6 +37,17 @@ containers.forEach(e => {
     })
 });
 
+containers.forEach(e => {
+    e.addEventListener('touchstart', () => {
+
+        if(e.id == hitPosition) {
+            result++;
+            score.textContent = result;
+            hitPosition = null;
+        } 
+    })
+});
+
 let moveMole = () => {
     timerId = setInterval(randomContainer, 500);
 }
